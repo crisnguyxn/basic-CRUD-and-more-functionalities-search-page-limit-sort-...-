@@ -9,7 +9,7 @@ const ProductSchema = mongoose.Schema({
     },
     price:{
         type:Number,
-        required:true,
+        required:[true,'Price must be provided']
     },
     rating:{
         type:Number,
@@ -22,6 +22,10 @@ const ProductSchema = mongoose.Schema({
     featured:{
         type:Boolean,
         default:false
+    },
+    company:{
+        type:String,
+        required:[true,'Company must be provided']
     }
 })
 
